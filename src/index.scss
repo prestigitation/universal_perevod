@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@300;400&family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@300;400;600&family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@300;400;600&family=MuseoModerno&family=Open+Sans:wght@600&display=swap');
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.page {
+    background: url('./img/background.png');
+    & .area {
+        width: 1285px;
+        margin: 0 auto;
+        @media screen and (max-width: 768px) {
+            width: 100vw;
+        }
+    }
+    &__banner {
+        width: 100vw;
+        background: url('./img/main_bg.png');
+        background-repeat: round;
+        height: 720px;
+        margin-top: -1px;
+        @media screen and (max-width: 768px) {
+            background: url('./img/main_mobile.png') !important;
+            background-repeat: unset;
+            height: 930px;
+            margin-top: 9px;
+        }
+    }
+}

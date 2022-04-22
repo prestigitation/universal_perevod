@@ -1,0 +1,83 @@
+.header {
+    &__buttons {
+        display: none;
+        @media (max-width: 768px) {
+            display: flex;
+            margin-right: 5%;
+            & svg {
+                margin-left: 10px;
+                margin-top: -4px;
+            }
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 14px;
+    }
+    &__logo {
+        @media (max-width: 768px) {
+            transform: scale(0.85);
+            margin-left: 13px;
+            margin-top: -4px;
+        }
+    }
+    &__delimiter {
+        margin-top: 13px;
+        border: 1px solid #DCDCDC;
+        position: absolute;
+        width: 100vw;
+        @media screen and (max-width: 768px) {
+            margin-top: 7px;
+        }
+    }
+    &__phones {
+        display: grid;
+        grid-template-columns: auto 160px auto;
+        grid-column-gap: 22.6px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 213px;
+        &--phone {
+            font-family: Open Sans;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 26px;
+            letter-spacing: 0em;
+        }
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+    &__contacts {
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+        &--mail {
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 100;
+            line-height: 21px;
+            letter-spacing: 0em;
+            margin-left: 12px;
+            &_wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-bottom: 22px;
+                margin-top: -4px;
+            }
+        }
+        &--workhours {
+            display: flex;
+            gap: 16px;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 21px;
+            letter-spacing: 0em;
+            margin-top: -14px;
+        }
+    }
+}

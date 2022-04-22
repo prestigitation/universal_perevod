@@ -1,0 +1,46 @@
+.banner {
+    &__wrapper {
+        padding-top: 131px;
+        margin-left: -8px;
+        @media (max-width: 768px) {
+            padding-top: 60px;
+        }
+    }
+    &__heading {
+        color: white;
+        font-family: Montserrat;
+        font-size: 54px;
+        font-weight: 600;
+        line-height: 66px;
+        letter-spacing: 0em;
+        text-align: left;
+        &--name {
+            font-size: 55px;
+            font-weight: 800;
+            margin-left: -3.5px;
+            line-height: 65px;
+            letter-spacing: 0em;
+            background: linear-gradient(45deg, #8437CB 33%, #6081DC, #5C8BDF, #5797E2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #0B2349;
+            display: table;
+            @media (max-width: 768px) {
+                font-family: unset;
+                font-size: 41px;
+                font-weight: 500;
+                line-height: 48px;
+                margin-left: unset;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            font-family: Montserrat;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 49px;
+            letter-spacing: 0em;
+            text-align: left;
+            padding: 0 29px;
+        }
+    }
+}

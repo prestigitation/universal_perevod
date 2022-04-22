@@ -1,0 +1,42 @@
+.header__categories {
+    margin-top: 14px;
+    display: flex;
+    height: 51px;
+    align-items: center;
+    gap: 41.8px;
+    &--category {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0em;
+        color: #929292;
+        height: inherit;
+        align-items: center;
+        display: flex;
+        &:last-child {
+            margin-left: 7px;
+            margin-top: -3px;
+        }
+        &:hover {
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0em;
+            color: #582D7F;
+            border-left: 1px solid #CDCDCD;
+            border-right: 1px solid #CDCDCD;
+            padding-left: 12.5px;
+            padding-right: 12.5px;
+            margin-left: unset;
+            margin-top: unset;
+            justify-content: center;
+            transition: width 2s, height 2s, transform 2s;
+            cursor: pointer;
+        }
+    }
+    @media (max-width: 768px) {
+        display: none;
+    }
+}

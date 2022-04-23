@@ -1,7 +1,6 @@
 import Header from './components/Header';
 import HeaderCategories from './components/Header/Categories';
 import IndexBanner from './components/IndexBanner';
-
 function App() {
   return (
     <div className="page">

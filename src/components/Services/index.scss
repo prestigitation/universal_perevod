@@ -1,0 +1,37 @@
+.services {
+    &__wrapper {
+        margin-top: 111px;
+        @media (max-width: 768px) {
+            margin-top: 70px;
+        }
+    }
+    &__title {
+        font-family: Montserrat;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 59px;
+        margin-bottom: 56px;
+        margin-left: -9px;
+        @media (max-width: 768px) {
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 40px;
+            margin-left: unset;
+        }
+    }
+    &__cards {
+        &--wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-left: -9px;
+            grid-column-gap: 15px;
+            grid-row-gap: 30px;
+            @media (max-width: 768px) {
+                grid-template-columns: unset;
+                grid-row-gap: 20px;
+                grid-column-gap: unset;
+                margin-left: unset;
+            }
+        }
+    }
+}

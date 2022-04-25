@@ -1,0 +1,40 @@
+.additional__services {
+    &--title {
+        font-family: Montserrat;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 59px;
+        text-align: left;
+        margin-top: 68px;
+        margin-left: -9px;
+        @media (max-width: 768px) {
+            font-size: 36px;
+            line-height: 44px;
+            margin-top: unset;
+            margin-left: unset;
+        }
+    }
+    &--list {
+        margin-top: 52px;
+        margin-left: -9px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 33px;
+        grid-auto-flow: column;
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            grid-row-gap: unset;
+            margin-top: 40px;
+            margin-left: unset;
+        }
+    }
+    &--name {
+        margin-left: 20px;
+        @media (max-width: 768px) {
+            margin-left: unset;
+        }
+    }
+}

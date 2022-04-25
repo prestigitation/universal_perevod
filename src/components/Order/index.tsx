@@ -3,6 +3,7 @@ import './index.scss'
 import arrowDown from '../../img/arrow_down.png'
 import select from '../../img/select.png'
 import docs from '../../img/docs.png'
+import passed from '../../img/passed.png'
 
 export interface Step {
     value: number,
@@ -13,18 +14,17 @@ export interface Step {
 
 export default function Order() {
     function changeStep(stepNumber: number) {
-        if(stepNumber > 1) {
-            if(stepNumber > step.value) {
-
-            } else {
-                
-            }
-        } else {
-            let nextStep = steps.find(step => step.value === stepNumber)
-            setStep(nextStep as Step)
+        let nextStep = steps.find(step => step.value === stepNumber)
+        if(stepNumber - 1 < steps.length && !passedSteps.includes(stepNumber)) {
+            passedSteps.push(stepNumber - 1)
+        } else if (stepNumber < step.value) { // если делаем шаг назад
+            setPassedSteps(passedSteps.filter(step => step < stepNumber))
         }
+        
+        setStep(nextStep as Step)
     }
 
+    let [passedSteps, setPassedSteps] = useState<number[]>([])
     let steps: Step[] = [
         {
             value: 1, 
@@ -78,10 +78,10 @@ export default function Order() {
                         <textarea className="order__data--info" placeholder='Введите задание в текстовое поле' />
                     </div>
                     <div className="order__data--buttons">
-                        <div className="order__data--button order__data--button--inactive">
+                        <div className="order__data--button order__data--button--inactive" onClick={() => changeStep(1)}>
                             Назад
                         </div>
-                        <div className="order__data--button">
+                        <div className="order__data--button" onClick={() => changeStep(3)}>
                             Далее
                         </div>  
                     </div>
@@ -100,7 +100,7 @@ export default function Order() {
                     <textarea className="order__contacts--info" placeholder='E-mail' />
                 </div>
                 <div className="order__contacts--buttons">
-                    <div className="order__contacts--button order__contacts--button--inactive">
+                    <div className="order__contacts--button order__contacts--button--inactive" onClick={() => changeStep(2)}>
                         Назад
                     </div>
                     <div className="order__contacts--button">
@@ -124,7 +124,7 @@ export default function Order() {
                         steps.map((currentStep: Step, index: number) => 
                         <>
                             <span className={`order__step ${currentStep.value === step.value ? 'order__step--active' : '' } `} onClick={() => setStep(currentStep)} key={index}>
-                                {currentStep.value}
+                                {passedSteps.includes(currentStep.value) && currentStep.value !== step.value ? <img src={passed} alt="steps_passed"></img> : currentStep.value}
                             </span>
                         </>
                         )

@@ -234,6 +234,9 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
+        @media (max-width: 768px) {
+            padding-top: 2px;
+        }
         &:nth-child(1) {
             width: 260px !important;
             @media (max-width: 768px) {
@@ -270,9 +273,8 @@
             margin-top: -7px;
             margin-right: 1px;
             @media (max-width: 768px) {
-                margin-top: -4px;
-                margin-top: unset;
-                margin-right: unset;
+                margin-top: -6px;
+                margin-right: -1px;
             }
         }
         &--arrow {
@@ -314,7 +316,7 @@
     &__steps {
         display: flex;
         justify-content: space-between;
-        margin-top: 27px;
+        margin-top: 28px;
         margin-bottom: -34px;
         &--titles {
             display: flex;
@@ -325,13 +327,13 @@
             }
         }
         &--last {
-            margin-top: 42px !important;
+            margin-top: 41px !important;
             @media (max-width: 768px) {
                 margin-top: 30px !important;
             }
         }
         &--content {
-            margin-top: 47px;
+            margin-top: 46px;
             @media (max-width: 768px) {
                 margin-top: 30px;
             }

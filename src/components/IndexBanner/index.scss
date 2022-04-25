@@ -4,6 +4,21 @@
         margin-left: -8px;
         display: flex;
         justify-content: space-between;
+        &--cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 90px;
+            grid-column-gap: 16px;
+            margin-left: -8px;
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 35px 19px 0 19px;
+                grid-column-gap: 15px;
+                grid-row-gap: 15px;
+                margin-top: unset;
+                margin-left: unset;
+            }
+        }
         @media (max-width: 768px) {
             flex-direction: column;
             padding: 60px 20px 0 28px;

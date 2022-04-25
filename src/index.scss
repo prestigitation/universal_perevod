@@ -4,6 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@300;400;600&family=Open+Sans:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@300;400;600&family=MuseoModerno&family=Open+Sans:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@300;400;600&family=MuseoModerno&family=Open+Sans:wght@600&family=Sulphur+Point&display=swap');
+@mixin mobile {
+    @media screen and (max-width: 768px) {
+        width: 335px !important;
+        margin: 0 auto !important;
+    }
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -21,9 +28,25 @@ code {
     & .area {
         width: 1285px;
         margin: 0 auto;
+        &__mobile {
+            @media (max-width: 768px) {
+                width: 335px !important;
+                margin: 0 auto;
+            }
+        }
         @media screen and (max-width: 768px) {
             width: 100vw;
         }
+    }
+    &__colored {
+        width: 100vw;
+        background: url('./img/background.png');
+    }
+    &__white {
+        background: white !important;
+    }
+    &__bordered {
+        border-radius: 20px;
     }
     &__banner {
         width: 100vw;
@@ -36,6 +59,27 @@ code {
             background-repeat: unset;
             height: 930px;
             margin-top: 9px;
+        }
+    }
+    &__mobile {
+        @include mobile;
+    }
+    &__services {
+        @include mobile;
+        &--padding {
+            padding-top: 90px;
+            @media (max-width: 768px) {
+                padding-top: 342px;
+            }
+        }
+    }
+    &__additionalservice {
+        &--wrapper {
+            padding-bottom: 110px;
+            @media (max-width: 768px) {
+                margin-top: 40px;
+                padding-bottom: 40px;
+            }
         }
     }
 }

@@ -1,8 +1,49 @@
 import Order from '../Order'
 import './index.scss'
 
+import clock from '../../img/clock.png'
+import courier from '../../img/courier.png'
+import price from '../../img/price.png'
+import quality from '../../img/quality.png'
+import Card from '../Order/Card'
+
+export interface OrderCard {
+    description: string,
+    title: string,
+    imageLink: string,
+    bgColor: string,
+}
+
 export default function IndexBanner() {
+    let orderCards: OrderCard[] | [] = [
+        {
+            description: 'Перевод за 1 час', 
+            title: 'скорость', 
+            imageLink: clock,
+            bgColor: '#B8DDDE'  
+        },
+        {
+            description: 'Всего 390 руб',
+            title: 'низкие цены',
+            imageLink: price,
+            bgColor: '#F9EAB5'
+        },
+        {
+            title: 'качество',
+            description: 'Переводчики профессионалы',
+            imageLink: quality,
+            bgColor: '#D7EFC7'
+        },
+        {
+            title: 'бесплатно',
+            description: 'Курьерская доставка',
+            imageLink: courier,
+            bgColor: '#D1D7FA'
+        }
+    ]
+
     return (
+        <>
         <div className="banner__wrapper">
             <div className="banner__heading--wrapper">
                 <div className="banner__heading">
@@ -24,5 +65,16 @@ export default function IndexBanner() {
                 <Order />
             </div>
         </div>
+        <div className="banner__wrapper--cards">
+            {orderCards.map (card => 
+                <Card 
+                    bgColor={card.bgColor} 
+                    imageLink={card.imageLink}
+                    title={card.title}
+                    description={card.description}
+                /> 
+            )}
+        </div>
+        </>
     )
 }

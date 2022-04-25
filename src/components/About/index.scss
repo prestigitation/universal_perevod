@@ -1,0 +1,172 @@
+.about {
+    &__wrapper {
+        display: flex;
+        padding-top: 110px;
+        gap: 360px;
+        @media (max-width: 768px) {
+            padding-top: 70px;
+            display: unset;
+            gap: unset;
+        }
+    }
+    &__certificate {
+        width: -moz-available;
+        @media (max-width: 768px) {
+            position: relative;
+            z-index: 6;
+            width: unset;
+        }
+        &--cover {
+            display: none;
+            &--desktop {
+                display: block;
+                position: relative;
+                top: -650px;
+                z-index: 5;
+                left: -238px;
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+            @media (max-width: 768px) {
+                display: block;
+                position: relative;
+                z-index: 5;
+                left: 134px;
+                top: -578px;
+            }
+        }
+    }
+    &__documents {
+        width: 377px;
+        &--title {
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: center;
+            margin-bottom: 16px;
+            margin-top: 49px;
+            @media (max-width: 768px) {
+                margin-top: unset;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            margin-top: 58px;
+            width: unset;
+        }
+    }
+    &__text {
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__title {
+        font-family: Montserrat;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 59px;
+        margin-top: 0px;
+        @media (max-width: 768px) {
+            font-size: 36px;
+            line-height: 44px;
+            margin-top: unset;
+            margin-bottom: 24px;
+        }
+    }
+    &__content {
+        margin-top: 59px;
+        width: 549px;
+        &>p {
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 22px;
+            margin-bottom: 22px;
+            @media (max-width: 768px) {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            margin-bottom: 10px;
+            width: unset;
+            margin-top: 0px;
+        }
+    }
+    &__sticker {
+        display: flex;
+        border: 1px dashed #582D7F;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-top: 47px !important;
+        width: 489px;
+        height: 168px;
+        padding: 0px 1px 1px 39px;
+        @media (max-width: 768px) {
+            padding: 5px 0 6px 17px;
+            height: 126px;
+            margin-top: unset;
+            width: unset;
+            height: 126px;
+        }
+        &--text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 46px;
+            margin-top: -20px;
+            gap: 4px;
+            @media (max-width: 768px) {
+                margin-left: 14px;
+                margin-top: -11px;
+                gap: 2px;
+            }
+        }
+        &--experience {
+            color: #582D7F;
+            font-family: Montserrat;
+            font-size: 144px;
+            font-weight: 400;
+            line-height: 176px;
+            margin-top: -3px;
+            @media (max-width: 768px) {
+                font-size: 90px;
+                margin-top: unset;
+                line-height: 110px;
+            }
+        }
+        &--heading {
+            color: #582D7F;
+            font-family: Montserrat;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 59px;
+            @media (max-width: 768px) {
+                font-size: 38px;
+                line-height: 46px;
+                margin-top: -3px;
+            }
+        }
+        &--content {
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 22px;
+            letter-spacing: 0em;
+            width: 197px;
+            margin-bottom: -4px;
+            @media (max-width: 768px) {
+                font-size: 16px;
+                line-height: 20px;
+                width: 175px;
+                margin-top: -4px;
+            }
+        }
+    }
+}

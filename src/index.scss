@@ -73,6 +73,30 @@ code {
             }
         }
     }
+    &__reasons {
+        width: 1301px !important;
+        @media (max-width: 768px) {
+            width: unset;
+        }
+    }
+    &__request {
+        background: url('./img/request_translate_desktop.png') no-repeat;
+        width: 1302px !important;
+        height: 616px;
+        border-radius: 10px;
+        @media (max-width: 768px) {
+            background: url('./img/request_translate.png');
+            height: 1155px !important;
+            width: 100% !important;
+            margin-top: -40px !important;
+        }
+    }
+    &__about {
+        height: 827px;
+        @media (max-width: 768px) {
+            height: 1312px;
+        }
+    }
     &__additionalservice {
         &--wrapper {
             padding-bottom: 110px;

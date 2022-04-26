@@ -1,8 +1,10 @@
 import About from './components/About';
 import AdditionalServices from './components/AdditionalServices';
+import ChooseReasons from './components/ChooseReasons';
 import Header from './components/Header';
 import HeaderCategories from './components/Header/Categories';
 import IndexBanner from './components/IndexBanner';
+import Request from './components/Request';
 import Services from './components/Services';
 function App() {
   return (
@@ -27,9 +29,17 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="page__white page__bordered">
+      <div className="page__white page__bordered page__about">
         <div className="area area__mobile">
           <About />
+        </div>
+      </div>
+      <div className="page__colored">
+        <div className="area area__mobile page__reasons">
+          <ChooseReasons />
+        </div>
+        <div className="area page__request">
+          <Request />
         </div>
       </div>
     </div>

@@ -73,6 +73,17 @@ code {
             }
         }
     }
+    &__taxes {
+        &--table {
+            width: 1286px;
+            margin: 0 auto;
+            @media (max-width: 768px) {
+                width: unset;
+                margin: unset;
+                overflow-x: scroll;
+            }
+        }
+    }
     &__reasons {
         width: 1301px !important;
         @media (max-width: 768px) {
@@ -82,7 +93,7 @@ code {
     &__request {
         background: url('./img/request_translate_desktop.png') no-repeat;
         width: 1302px !important;
-        height: 616px;
+        height: unset;
         border-radius: 10px;
         @media (max-width: 768px) {
             background: url('./img/request_translate.png');

@@ -4,8 +4,13 @@ import ChooseReasons from './components/ChooseReasons';
 import Header from './components/Header';
 import HeaderCategories from './components/Header/Categories';
 import IndexBanner from './components/IndexBanner';
+import Questions from './components/Questions';
 import Request from './components/Request';
+import Reviews from './components/Reviews';
 import Services from './components/Services';
+import Taxes from './components/Taxes';
+import TaxesTable from './components/Taxes/Table';
+
 function App() {
   return (
     <div className="page">
@@ -40,6 +45,22 @@ function App() {
         </div>
         <div className="area page__request">
           <Request />
+        </div>
+        <div className="area area__mobile">
+          <Reviews />
+        </div>
+      </div>
+      <div className="page__white page__bordered">
+        <div className="area area__mobile">
+          <Taxes />
+        </div>
+        <div className="page__taxes--table">
+          <TaxesTable />
+        </div>
+      </div>
+      <div className="page__colored">
+        <div className="area area__mobile">
+          <Questions />
         </div>
       </div>
     </div>

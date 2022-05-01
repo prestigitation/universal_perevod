@@ -165,6 +165,9 @@
             }
             &>tr:nth-child(n+2)>td:nth-child(n+3) {
                 padding-left: 129px !important;
+                @media (max-width: 768px) {
+                    padding-left: 10px !important;
+                }
             }
             &>tr:nth-child(n+3)>td {
                 padding-left: 124px;
@@ -222,6 +225,7 @@
                 width: max-content;
                 margin-left: 20px;
                 margin-top: -5px;
+                overflow-x: scroll;
             }
         }
     }

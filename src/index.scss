@@ -74,14 +74,23 @@ code {
         }
     }
     &__taxes {
+        padding-bottom: 110px;
+        @media (max-width: 768px) {
+            padding-bottom: 70px;
+        }
         &--table {
             width: 1286px;
             margin: 0 auto;
             @media (max-width: 768px) {
                 width: unset;
                 margin: unset;
-                overflow-x: scroll;
             }
+        }
+    }
+    &__countries {
+        padding-top: 86.25px;
+        @media (max-width: 768px) {
+            padding-top: unset;
         }
     }
     &__reasons {

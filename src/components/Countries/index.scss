@@ -1,0 +1,28 @@
+.countries {
+    &__wrapper {
+        display: flex;
+        gap: 26px;
+        justify-content: center;
+        margin-left: -16px;
+        margin-top: -26px;
+        @media (max-width: 768px) {
+            margin-left: -15px;
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(10, 90px);
+            padding-left: 182%;
+            margin-top: 25px;
+            gap: 20px !important;
+            padding-left: 133%;
+        }
+    }
+}
+
+.country {
+    &__image {
+        transform: scale(1) !important;
+        @media (max-width: 768px) {
+            transform: scale(0.75) !important;
+        }
+    }
+}

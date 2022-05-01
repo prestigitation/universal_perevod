@@ -1,6 +1,7 @@
 import About from './components/About';
 import AdditionalServices from './components/AdditionalServices';
 import ChooseReasons from './components/ChooseReasons';
+import Countries from './components/Countries';
 import Header from './components/Header';
 import HeaderCategories from './components/Header/Categories';
 import IndexBanner from './components/IndexBanner';
@@ -50,7 +51,7 @@ function App() {
           <Reviews />
         </div>
       </div>
-      <div className="page__white page__bordered">
+      <div className="page__white page__bordered page__taxes">
         <div className="area area__mobile">
           <Taxes />
         </div>
@@ -61,6 +62,9 @@ function App() {
       <div className="page__colored">
         <div className="area area__mobile">
           <Questions />
+        </div>
+        <div className="page__countries">
+          <Countries />
         </div>
       </div>
     </div>
